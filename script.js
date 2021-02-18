@@ -153,7 +153,7 @@ function updateOffSets(){ // Update the value of cells that are neighboring a bo
       if(gameBoard[row][col].data == BOMB){
         for(var ni = 0; ni < 8; ni++){ // ni - neighbor index. There are 8 neighbors to each not border cell.
           nr = row + gridOffSets[ni][0];
-          nc = row + gridOffSets[ni][1];
+          nc = col + gridOffSets[ni][1];
 
           if(isOnBoard(nr,nc) && (gameBoard[nr][nc].data != BOMB)){
             gameBoard[nr][nc].data++;
